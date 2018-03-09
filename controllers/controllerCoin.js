@@ -3,8 +3,9 @@ const router = express.Router();
 const { getCurrentPrice, getPreviousPrice } = require('../models/modelCoin.js');
 
 router.get('/compare', (req,res) => {
-let pp = getPreviousPrice().then(res => res);
-console.log(pp);
+getCurrentPrice()
+.then(res => res.send(res))
+
 
 
 });

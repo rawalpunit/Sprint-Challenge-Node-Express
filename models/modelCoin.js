@@ -6,7 +6,7 @@ function getCurrentPrice() {
     fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
     .then(res => res.json())
       .then(res => {
-        resolve(Number(res.bpi.USD.rate_float));
+        resolve(res);
       })
       .catch(res => {
         reject("shit..there's an errpr", res);
