@@ -1,7 +1,8 @@
-const config = require('./config.js');
+const config = require('../config.js');
 const express = require('express');
 const app = express();
 const PORT = config.port;
+const controllerCoin = require('../controllers/controllerCoin');
 
 app.use(controllerCoin);
 
